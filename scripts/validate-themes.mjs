@@ -70,7 +70,8 @@ for (const file of files) {
       const a = swatches[i];
       const b = swatches[j];
       // Identical values are deliberate aliases — tags reuse the function
-      // colour, constants and headings reuse the accent.
+      // colour, const-declared variables reuse the constant colour, and
+      // headings reuse the accent.
       if (a.hex === b.hex) continue;
       const d = deltaE(a.hex, b.hex);
       if (d < tightest.d) tightest = { d, a, b };

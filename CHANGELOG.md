@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.2.1]
+
+Variables declared with `const` (the grammar's `variable.other.constant`,
+reinforced by semantic highlighting's `variable.readonly`) no longer share
+the keyword accent. They now take the constant-family colour, so in
+`const codeLength = ...` the keyword and the name it declares read as two
+different things — matching the convention of mainstream themes.
+
 ## [1.2.0]
 
 Added 22 schools — 51 schools, 102 themes total — chosen for athletic
