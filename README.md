@@ -85,6 +85,21 @@ If the accent is too dark, too close to the comment color, or collides with the 
 Issues and pull requests welcome at
 [github.com/bjjeong/vscode-college-colors](https://github.com/bjjeong/vscode-college-colors).
 
+## Releasing
+
+Releases are cut from tags. Bump `version` in `package.json` in a PR, merge it,
+then tag the merge commit:
+
+```bash
+git tag v1.2.0 && git push origin v1.2.0
+```
+
+The [release workflow](.github/workflows/release.yml) rebuilds and validates
+every theme, publishes to the VS Code Marketplace and Open VSX, and creates a
+GitHub Release with the packaged `.vsix` attached. It refuses to run if the tag
+doesn't match `package.json`, and the Marketplace rejects re-publishing a
+version number, so a version can only ever ship once.
+
 ## Trademark note
 
 This extension is an independent, unaffiliated project. It is not endorsed by, sponsored by, or associated with any of the universities named. School names are used descriptively, to identify which color palette a theme reproduces. No institutional logos or marks are included — the extension icon is an abstract palette. Colors themselves are not protectable subject matter.
