@@ -1,0 +1,211 @@
+{
+  "$comment": [
+    "One entry per school. `dark` is the deep brand color that carries the editor chrome;",
+    "`accent` is the bright brand color used for highlights, keywords, and the cursor.",
+    "Omit `dark` and the generator derives a deep, low-chroma tint from `accent` instead —",
+    "correct for schools whose only brand color is bright (Tennessee, Texas, Ohio State).",
+    "`source` records where the hex values were verified. Add a school by appending an object",
+    "and running `npm run build`; nothing else needs to change."
+  ],
+  "schools": [
+    {
+      "slug": "michigan",
+      "label": "Michigan Wolverines",
+      "dark": "#00274C",
+      "accent": "#FFCB05",
+      "source": "brand.umich.edu — Michigan Blue / Maize"
+    },
+    {
+      "slug": "ohio-state",
+      "label": "Ohio State Buckeyes",
+      "accent": "#BB0000",
+      "secondary": "#666666",
+      "source": "bux.osu.edu — Scarlet #BB0000, Gray #666666"
+    },
+    {
+      "slug": "alabama",
+      "label": "Alabama Crimson Tide",
+      "accent": "#9E1B32",
+      "source": "brand.ua.edu — Crimson PMS 201"
+    },
+    {
+      "slug": "georgia",
+      "label": "Georgia Bulldogs",
+      "accent": "#BA0C2F",
+      "secondary": "#000000",
+      "source": "teamcolorcodes.com — Bulldog Red PMS 200 C, Arch Black. Red leads, so the chrome derives from it rather than from black."
+    },
+    {
+      "slug": "texas",
+      "label": "Texas Longhorns",
+      "accent": "#BF5700",
+      "source": "teamcolorcodes.com — Burnt Orange PMS 159 C"
+    },
+    {
+      "slug": "texas-am",
+      "label": "Texas A&M Aggies",
+      "dark": "#500000",
+      "accent": "#8E2434",
+      "source": "tamus.edu brand guide — Aggie Maroon #500000 (accent lightened for legibility)"
+    },
+    {
+      "slug": "notre-dame",
+      "label": "Notre Dame Fighting Irish",
+      "dark": "#0C2340",
+      "accent": "#C99700",
+      "source": "onmessage.nd.edu — ND Blue #0C2340, Dome Gold #C99700"
+    },
+    {
+      "slug": "penn-state",
+      "label": "Penn State Nittany Lions",
+      "dark": "#041E42",
+      "accent": "#3B7DD8",
+      "source": "Penn State Blue #041E42 PMS 282 C (accent lightened for legibility)"
+    },
+    {
+      "slug": "lsu",
+      "label": "LSU Tigers",
+      "dark": "#461D7C",
+      "accent": "#FDD023",
+      "source": "teamcolorcodes.com — Purple #461D7C, Gold #FDD023"
+    },
+    {
+      "slug": "oregon",
+      "label": "Oregon Ducks",
+      "dark": "#154733",
+      "accent": "#FEE123",
+      "source": "teamcolorcodes.com — Oregon Green #154733, Yellow #FEE123"
+    },
+    {
+      "slug": "florida",
+      "label": "Florida Gators",
+      "dark": "#0021A5",
+      "accent": "#FA4616",
+      "source": "teamcolorcodes.com — Blue PMS 287 C, Orange PMS 172 C"
+    },
+    {
+      "slug": "florida-state",
+      "label": "Florida State Seminoles",
+      "dark": "#782F40",
+      "accent": "#CEB888",
+      "source": "brand.fsu.edu — Garnet PMS 195 C, Gold PMS 7502 C"
+    },
+    {
+      "slug": "usc",
+      "label": "USC Trojans",
+      "dark": "#990000",
+      "accent": "#FFC72C",
+      "source": "teamcolorcodes.com — Cardinal #990000, Gold #FFC72C"
+    },
+    {
+      "slug": "ucla",
+      "label": "UCLA Bruins",
+      "dark": "#2D68C4",
+      "accent": "#F2A900",
+      "source": "teamcolorcodes.com — UCLA Blue #2D68C4, Westwood Gold #F2A900"
+    },
+    {
+      "slug": "clemson",
+      "label": "Clemson Tigers",
+      "dark": "#522D80",
+      "accent": "#F56600",
+      "source": "clemson.edu/brand — Clemson Orange PMS 1595 C, Regalia PMS 268 C"
+    },
+    {
+      "slug": "oklahoma",
+      "label": "Oklahoma Sooners",
+      "dark": "#841617",
+      "accent": "#FDF9D8",
+      "source": "teamcolorcodes.com — Crimson PMS 201 C, Cream"
+    },
+    {
+      "slug": "tennessee",
+      "label": "Tennessee Volunteers",
+      "dark": "#58595B",
+      "accent": "#FF8200",
+      "source": "teamcolorcodes.com — Tennessee Orange PMS 151 C, Smokey PMS 425 C. Smokey carries the chrome; deriving it from the orange produced brown, which is not a Tennessee colour."
+    },
+    {
+      "slug": "auburn",
+      "label": "Auburn Tigers",
+      "dark": "#0C2340",
+      "accent": "#E87722",
+      "source": "teamcolorcodes.com — Auburn Blue #0C2340, Auburn Orange #E87722"
+    },
+    {
+      "slug": "wisconsin",
+      "label": "Wisconsin Badgers",
+      "accent": "#C5050C",
+      "source": "brand.wisc.edu — Badger Red PMS 200 C"
+    },
+    {
+      "slug": "nebraska",
+      "label": "Nebraska Cornhuskers",
+      "accent": "#E41C38",
+      "secondary": "#FDF2D9",
+      "source": "ucomm.unl.edu — Scarlet PMS 186 C, Cream PMS 7401 C"
+    },
+    {
+      "slug": "michigan-state",
+      "label": "Michigan State Spartans",
+      "dark": "#18453B",
+      "accent": "#4AA88C",
+      "source": "MSU Green #18453B PMS 567 C (accent lightened for legibility)"
+    },
+    {
+      "slug": "iowa",
+      "label": "Iowa Hawkeyes",
+      "dark": "#000000",
+      "accent": "#FFCD00",
+      "source": "teamcolorcodes.com — Black PMS Black 6 C, Hawkeye Gold PMS 116 C"
+    },
+    {
+      "slug": "washington",
+      "label": "Washington Huskies",
+      "dark": "#4B2E83",
+      "accent": "#B7A57A",
+      "source": "teamcolorcodes.com — Purple #4B2E83, Gold #B7A57A"
+    },
+    {
+      "slug": "northwestern",
+      "label": "Northwestern Wildcats",
+      "dark": "#4E2A84",
+      "accent": "#A87FE0",
+      "source": "Northwestern Purple #4E2A84 PMS 268 C (accent lightened for legibility)"
+    },
+    {
+      "slug": "harvard",
+      "label": "Harvard Crimson",
+      "accent": "#A51C30",
+      "source": "brand.harvard.edu — Harvard Crimson PMS 1807 C"
+    },
+    {
+      "slug": "penn",
+      "label": "Penn Quakers",
+      "dark": "#011F5B",
+      "accent": "#990000",
+      "source": "branding.upenn.edu — Penn Blue PMS 288, Penn Red PMS 201"
+    },
+    {
+      "slug": "mit",
+      "label": "MIT Engineers",
+      "dark": "#750014",
+      "accent": "#FF1423",
+      "source": "brand.mit.edu — MIT Red #750014, Bright Red #FF1423"
+    },
+    {
+      "slug": "nyu",
+      "label": "NYU Violets",
+      "dark": "#330662",
+      "accent": "#8900E1",
+      "source": "nyu.edu brand guidelines — NYU Violet #57068C, Ultra Violet #8900E1"
+    },
+    {
+      "slug": "columbia",
+      "label": "Columbia Lions",
+      "dark": "#003865",
+      "accent": "#B9D9EB",
+      "source": "visualidentity.columbia.edu — Columbia Blue PMS 290; Athletic Dark Blue PMS 2955 C"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "name": "college-colors",
+  "displayName": "College Colors",
+  "description": "Dark VS Code themes in the colors of 29 well-known universities — Michigan, Ohio State, Alabama, Texas, Notre Dame, LSU, Harvard, MIT, NYU and more. Each school's official palette drives the editor chrome, with a syntax scheme tuned for contrast against it.",
+  "version": "1.0.0",
+  "publisher": "bjjeong",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjjeong/vscode-college-colors"
+  },
+  "bugs": {
+    "url": "https://github.com/bjjeong/vscode-college-colors/issues"
+  },
+  "homepage": "https://github.com/bjjeong/vscode-college-colors#readme",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "dark theme",
+    "college",
+    "university",
+    "school colors",
+    "ncaa"
+  ],
+  "galleryBanner": {
+    "color": "#1A1A1A",
+    "theme": "dark"
+  },
+  "scripts": {
+    "build": "node scripts/build-themes.mjs",
+    "validate": "node scripts/validate-themes.mjs",
+    "test": "npm run build && npm run validate",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.2.0"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "College Colors: Michigan Wolverines",
+        "uiTheme": "vs-dark",
+        "path": "./themes/michigan-color-theme.json"
+      },
+      {
+        "label": "College Colors: Ohio State Buckeyes",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ohio-state-color-theme.json"
+      },
+      {
+        "label": "College Colors: Alabama Crimson Tide",
+        "uiTheme": "vs-dark",
+        "path": "./themes/alabama-color-theme.json"
+      },
+      {
+        "label": "College Colors: Georgia Bulldogs",
+        "uiTheme": "vs-dark",
+        "path": "./themes/georgia-color-theme.json"
+      },
+      {
+        "label": "College Colors: Texas Longhorns",
+        "uiTheme": "vs-dark",
+        "path": "./themes/texas-color-theme.json"
+      },
+      {
+        "label": "College Colors: Texas A&M Aggies",
+        "uiTheme": "vs-dark",
+        "path": "./themes/texas-am-color-theme.json"
+      },
+      {
+        "label": "College Colors: Notre Dame Fighting Irish",
+        "uiTheme": "vs-dark",
+        "path": "./themes/notre-dame-color-theme.json"
+      },
+      {
+        "label": "College Colors: Penn State Nittany Lions",
+        "uiTheme": "vs-dark",
+        "path": "./themes/penn-state-color-theme.json"
+      },
+      {
+        "label": "College Colors: LSU Tigers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/lsu-color-theme.json"
+      },
+      {
+        "label": "College Colors: Oregon Ducks",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oregon-color-theme.json"
+      },
+      {
+        "label": "College Colors: Florida Gators",
+        "uiTheme": "vs-dark",
+        "path": "./themes/florida-color-theme.json"
+      },
+      {
+        "label": "College Colors: Florida State Seminoles",
+        "uiTheme": "vs-dark",
+        "path": "./themes/florida-state-color-theme.json"
+      },
+      {
+        "label": "College Colors: USC Trojans",
+        "uiTheme": "vs-dark",
+        "path": "./themes/usc-color-theme.json"
+      },
+      {
+        "label": "College Colors: UCLA Bruins",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ucla-color-theme.json"
+      },
+      {
+        "label": "College Colors: Clemson Tigers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/clemson-color-theme.json"
+      },
+      {
+        "label": "College Colors: Oklahoma Sooners",
+        "uiTheme": "vs-dark",
+        "path": "./themes/oklahoma-color-theme.json"
+      },
+      {
+        "label": "College Colors: Tennessee Volunteers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tennessee-color-theme.json"
+      },
+      {
+        "label": "College Colors: Auburn Tigers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/auburn-color-theme.json"
+      },
+      {
+        "label": "College Colors: Wisconsin Badgers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/wisconsin-color-theme.json"
+      },
+      {
+        "label": "College Colors: Nebraska Cornhuskers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nebraska-color-theme.json"
+      },
+      {
+        "label": "College Colors: Michigan State Spartans",
+        "uiTheme": "vs-dark",
+        "path": "./themes/michigan-state-color-theme.json"
+      },
+      {
+        "label": "College Colors: Iowa Hawkeyes",
+        "uiTheme": "vs-dark",
+        "path": "./themes/iowa-color-theme.json"
+      },
+      {
+        "label": "College Colors: Washington Huskies",
+        "uiTheme": "vs-dark",
+        "path": "./themes/washington-color-theme.json"
+      },
+      {
+        "label": "College Colors: Northwestern Wildcats",
+        "uiTheme": "vs-dark",
+        "path": "./themes/northwestern-color-theme.json"
+      },
+      {
+        "label": "College Colors: Harvard Crimson",
+        "uiTheme": "vs-dark",
+        "path": "./themes/harvard-color-theme.json"
+      },
+      {
+        "label": "College Colors: Penn Quakers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/penn-color-theme.json"
+      },
+      {
+        "label": "College Colors: MIT Engineers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mit-color-theme.json"
+      },
+      {
+        "label": "College Colors: NYU Violets",
+        "uiTheme": "vs-dark",
+        "path": "./themes/nyu-color-theme.json"
+      },
+      {
+        "label": "College Colors: Columbia Lions",
+        "uiTheme": "vs-dark",
+        "path": "./themes/columbia-color-theme.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="College Colors — a palette of school color themes">
+  <rect width="128" height="128" rx="24" ry="24" fill="#16181D"/>
+  <rect x="5.5" y="5.5" width="117" height="117" rx="20" ry="20"
+        fill="none" stroke="#3A3F4B" stroke-width="2"/>
+
+  <!-- Six swatches standing in for the palette, in school-color families.
+       Deliberately abstract: no institution's mark or logo appears here. -->
+  <g>
+    <rect x="14" y="31" width="31" height="31" rx="7" fill="#FFCB05"/>
+    <rect x="49" y="31" width="31" height="31" rx="7" fill="#C8102E"/>
+    <rect x="84" y="31" width="31" height="31" rx="7" fill="#F56600"/>
+    <rect x="14" y="66" width="31" height="31" rx="7" fill="#18A558"/>
+    <rect x="49" y="66" width="31" height="31" rx="7" fill="#2D68C4"/>
+    <rect x="84" y="66" width="31" height="31" rx="7" fill="#7B2FBF"/>
+  </g>
+</svg>
