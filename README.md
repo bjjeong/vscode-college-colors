@@ -1,6 +1,6 @@
 # College Colors
 
-VS Code themes in the colors of 29 well-known universities — one extension, one dark and one light theme per school.
+VS Code themes in the colors of 51 well-known universities — one extension, one dark and one light theme per school.
 
 ![College Colors preview](https://raw.githubusercontent.com/bjjeong/vscode-college-colors/main/images/hero.png)
 
@@ -27,16 +27,23 @@ Each link below is a preview render — dark first, light in parentheses.
 
 | | | |
 | --- | --- | --- |
-| [Alabama Crimson Tide](images/previews/alabama.png) ([light](images/previews/alabama-light.png)) | [Auburn Tigers](images/previews/auburn.png) ([light](images/previews/auburn-light.png)) | [Clemson Tigers](images/previews/clemson.png) ([light](images/previews/clemson-light.png)) |
-| [Columbia Lions](images/previews/columbia.png) ([light](images/previews/columbia-light.png)) | [Florida Gators](images/previews/florida.png) ([light](images/previews/florida-light.png)) | [Florida State Seminoles](images/previews/florida-state.png) ([light](images/previews/florida-state-light.png)) |
-| [Georgia Bulldogs](images/previews/georgia.png) ([light](images/previews/georgia-light.png)) | [Harvard Crimson](images/previews/harvard.png) ([light](images/previews/harvard-light.png)) | [Iowa Hawkeyes](images/previews/iowa.png) ([light](images/previews/iowa-light.png)) |
-| [LSU Tigers](images/previews/lsu.png) ([light](images/previews/lsu-light.png)) | [Michigan Wolverines](images/previews/michigan.png) ([light](images/previews/michigan-light.png)) | [Michigan State Spartans](images/previews/michigan-state.png) ([light](images/previews/michigan-state-light.png)) |
-| [MIT Engineers](images/previews/mit.png) ([light](images/previews/mit-light.png)) | [Nebraska Cornhuskers](images/previews/nebraska.png) ([light](images/previews/nebraska-light.png)) | [Northwestern Wildcats](images/previews/northwestern.png) ([light](images/previews/northwestern-light.png)) |
-| [Notre Dame Fighting Irish](images/previews/notre-dame.png) ([light](images/previews/notre-dame-light.png)) | [NYU Violets](images/previews/nyu.png) ([light](images/previews/nyu-light.png)) | [Ohio State Buckeyes](images/previews/ohio-state.png) ([light](images/previews/ohio-state-light.png)) |
-| [Oklahoma Sooners](images/previews/oklahoma.png) ([light](images/previews/oklahoma-light.png)) | [Oregon Ducks](images/previews/oregon.png) ([light](images/previews/oregon-light.png)) | [Penn Quakers](images/previews/penn.png) ([light](images/previews/penn-light.png)) |
-| [Penn State Nittany Lions](images/previews/penn-state.png) ([light](images/previews/penn-state-light.png)) | [Tennessee Volunteers](images/previews/tennessee.png) ([light](images/previews/tennessee-light.png)) | [Texas A&M Aggies](images/previews/texas-am.png) ([light](images/previews/texas-am-light.png)) |
-| [Texas Longhorns](images/previews/texas.png) ([light](images/previews/texas-light.png)) | [UCLA Bruins](images/previews/ucla.png) ([light](images/previews/ucla-light.png)) | [USC Trojans](images/previews/usc.png) ([light](images/previews/usc-light.png)) |
-| [Washington Huskies](images/previews/washington.png) ([light](images/previews/washington-light.png)) | [Wisconsin Badgers](images/previews/wisconsin.png) ([light](images/previews/wisconsin-light.png)) | |
+| [Alabama Crimson Tide](images/previews/alabama.png) ([light](images/previews/alabama-light.png)) | [Arizona State Sun Devils](images/previews/arizona-state.png) ([light](images/previews/arizona-state-light.png)) | [Arizona Wildcats](images/previews/arizona.png) ([light](images/previews/arizona-light.png)) |
+| [Auburn Tigers](images/previews/auburn.png) ([light](images/previews/auburn-light.png)) | [Brown Bears](images/previews/brown.png) ([light](images/previews/brown-light.png)) | [California Golden Bears](images/previews/berkeley.png) ([light](images/previews/berkeley-light.png)) |
+| [Caltech Beavers](images/previews/caltech.png) ([light](images/previews/caltech-light.png)) | [Chicago Maroons](images/previews/uchicago.png) ([light](images/previews/uchicago-light.png)) | [Clemson Tigers](images/previews/clemson.png) ([light](images/previews/clemson-light.png)) |
+| [Columbia Lions](images/previews/columbia.png) ([light](images/previews/columbia-light.png)) | [Cornell Big Red](images/previews/cornell.png) ([light](images/previews/cornell-light.png)) | [Dartmouth Big Green](images/previews/dartmouth.png) ([light](images/previews/dartmouth-light.png)) |
+| [Duke Blue Devils](images/previews/duke.png) ([light](images/previews/duke-light.png)) | [Florida Gators](images/previews/florida.png) ([light](images/previews/florida-light.png)) | [Florida State Seminoles](images/previews/florida-state.png) ([light](images/previews/florida-state-light.png)) |
+| [Georgia Bulldogs](images/previews/georgia.png) ([light](images/previews/georgia-light.png)) | [Georgia Tech Yellow Jackets](images/previews/georgia-tech.png) ([light](images/previews/georgia-tech-light.png)) | [Harvard Crimson](images/previews/harvard.png) ([light](images/previews/harvard-light.png)) |
+| [Illinois Fighting Illini](images/previews/illinois.png) ([light](images/previews/illinois-light.png)) | [Iowa Hawkeyes](images/previews/iowa.png) ([light](images/previews/iowa-light.png)) | [Johns Hopkins Blue Jays](images/previews/johns-hopkins.png) ([light](images/previews/johns-hopkins-light.png)) |
+| [Kansas Jayhawks](images/previews/kansas.png) ([light](images/previews/kansas-light.png)) | [Kentucky Wildcats](images/previews/kentucky.png) ([light](images/previews/kentucky-light.png)) | [LSU Tigers](images/previews/lsu.png) ([light](images/previews/lsu-light.png)) |
+| [Miami Hurricanes](images/previews/miami.png) ([light](images/previews/miami-light.png)) | [Michigan State Spartans](images/previews/michigan-state.png) ([light](images/previews/michigan-state-light.png)) | [Michigan Wolverines](images/previews/michigan.png) ([light](images/previews/michigan-light.png)) |
+| [Minnesota Golden Gophers](images/previews/minnesota.png) ([light](images/previews/minnesota-light.png)) | [MIT Engineers](images/previews/mit.png) ([light](images/previews/mit-light.png)) | [Nebraska Cornhuskers](images/previews/nebraska.png) ([light](images/previews/nebraska-light.png)) |
+| [North Carolina Tar Heels](images/previews/north-carolina.png) ([light](images/previews/north-carolina-light.png)) | [Northwestern Wildcats](images/previews/northwestern.png) ([light](images/previews/northwestern-light.png)) | [Notre Dame Fighting Irish](images/previews/notre-dame.png) ([light](images/previews/notre-dame-light.png)) |
+| [NYU Violets](images/previews/nyu.png) ([light](images/previews/nyu-light.png)) | [Ohio State Buckeyes](images/previews/ohio-state.png) ([light](images/previews/ohio-state-light.png)) | [Oklahoma Sooners](images/previews/oklahoma.png) ([light](images/previews/oklahoma-light.png)) |
+| [Oregon Ducks](images/previews/oregon.png) ([light](images/previews/oregon-light.png)) | [Penn Quakers](images/previews/penn.png) ([light](images/previews/penn-light.png)) | [Penn State Nittany Lions](images/previews/penn-state.png) ([light](images/previews/penn-state-light.png)) |
+| [Princeton Tigers](images/previews/princeton.png) ([light](images/previews/princeton-light.png)) | [Purdue Boilermakers](images/previews/purdue.png) ([light](images/previews/purdue-light.png)) | [Stanford Cardinal](images/previews/stanford.png) ([light](images/previews/stanford-light.png)) |
+| [Tennessee Volunteers](images/previews/tennessee.png) ([light](images/previews/tennessee-light.png)) | [Texas A&M Aggies](images/previews/texas-am.png) ([light](images/previews/texas-am-light.png)) | [Texas Longhorns](images/previews/texas.png) ([light](images/previews/texas-light.png)) |
+| [UCF Knights](images/previews/ucf.png) ([light](images/previews/ucf-light.png)) | [UCLA Bruins](images/previews/ucla.png) ([light](images/previews/ucla-light.png)) | [USC Trojans](images/previews/usc.png) ([light](images/previews/usc-light.png)) |
+| [Washington Huskies](images/previews/washington.png) ([light](images/previews/washington-light.png)) | [Wisconsin Badgers](images/previews/wisconsin.png) ([light](images/previews/wisconsin-light.png)) | [Yale Bulldogs](images/previews/yale.png) ([light](images/previews/yale-light.png)) |
 
 Don't see your school? [Open an issue](https://github.com/bjjeong/vscode-college-colors/issues) — adding one is a ten-line change.
 
@@ -63,7 +70,7 @@ The themes aren't maintained by hand. Each school is a small palette entry:
 - **No two token colors are perceptually confusable.** The floor is ΔE 0.052 in OKLab, calibrated against the tightest pair in a hand-tuned theme.
 - **Errors never read as keywords.** Normally red — but on a red-brand school that would collide, so the error color swings to magenta and gains an underline as a color-independent signal.
 
-`npm test` builds and then validates all 58. It exits non-zero if any theme fails, so a bad palette can't be packaged.
+`npm test` builds and then validates all 102. It exits non-zero if any theme fails, so a bad palette can't be packaged.
 
 ### Adding a school
 
