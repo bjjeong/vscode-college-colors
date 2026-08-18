@@ -51,10 +51,9 @@ jobs:
               echo "::error::Tag $TAG does not exist — manual runs only retry an already-tagged release. Push the tag to cut a new one."
               exit 1
             fi
-            if [ "$(git rev-parse "$TAG^{commit}")" != "$(git rev-parse HEAD)" ]; then
-              echo "::error::Tag $TAG does not point at this commit — manual runs must target the ref that was tagged."
-              exit 1
-            fi
+            # Release the tagged tree, not main's HEAD — main may have moved on
+            # since the tag (e.g. the very commit that fixed a failed release).
+            git checkout --detach "$TAG"
           fi
           echo "TAG=$TAG" >> "$GITHUB_ENV"
 
