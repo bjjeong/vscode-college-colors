@@ -1,0 +1,68 @@
+name: School request
+description: Request a new school — a complete request here is most of the work of adding it.
+title: "[School] "
+labels: ["school-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the request! Each school is a small entry in `palettes/schools.json`; the dark
+        and light themes are generated and validated from it automatically. Accurate official
+        colors are the whole game — everything else is machinery.
+
+  - type: input
+    id: label
+    attributes:
+      label: School and team name
+      description: As it should appear in the theme picker.
+      placeholder: Gonzaga Bulldogs
+    validations:
+      required: true
+
+  - type: input
+    id: accent
+    attributes:
+      label: Bright brand color (hex)
+      description: The color that carries highlights, keywords, and the cursor — usually the louder of the school's two colors.
+      placeholder: "#FFCB05"
+    validations:
+      required: true
+
+  - type: input
+    id: dark
+    attributes:
+      label: Deep brand color (hex, if the school has one)
+      description: >-
+        The dark color that carries the window chrome (activity bar, status bar, tabs).
+        Leave blank for one-color schools — the generator derives a dark tint from the
+        bright color instead.
+      placeholder: "#00274C"
+
+  - type: input
+    id: source
+    attributes:
+      label: Where these colors are documented
+      description: >-
+        Link to the school's brand/identity page (preferred) or a colors reference like
+        teamcolorcodes.com. Official brand hexes often differ from the values floating
+        around the web, so this link is what the values get verified against.
+      placeholder: https://brand.umich.edu
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the school list in the README and this school isn't already included.
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything unusual? (optional)
+      description: >-
+        For example: the deep color is pure black or a neutral grey (Iowa, Tennessee),
+        the two colors are nearly the same hue (Texas A&M), a third color matters more
+        than the second, or the athletic palette differs from the academic one.
