@@ -1,5 +1,10 @@
 # Change Log
 
+## [1.3.0]
+
+Added Bucknell Bison and Franklin & Marshall Diplomats — 53 schools,
+106 themes total.
+
 ## [1.2.1]
 
 Variables declared with `const` (the grammar's `variable.other.constant`,
