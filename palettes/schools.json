@@ -356,6 +356,20 @@
       "dark": "#0C234B",
       "accent": "#AB0520",
       "source": "brand.arizona.edu — Arizona Blue #0C234B PMS 289, Arizona Red #AB0520 PMS 200"
+    },
+    {
+      "slug": "bucknell",
+      "label": "Bucknell Bison",
+      "dark": "#071D49",
+      "accent": "#FC4C02",
+      "source": "teamcolorcodes.com / trucolor.net athletics palette — Bucknell Blue #071D49 PMS 2768, Orange #FC4C02 PMS 1655"
+    },
+    {
+      "slug": "franklin-marshall",
+      "label": "Franklin & Marshall Diplomats",
+      "dark": "#25377D",
+      "accent": "#5D76C2",
+      "source": "teamcolorcodes.com — F&M Navy #25377D PMS 2118; second colour is white, so the accent is the navy lightened for legibility"
     }
   ]
 }

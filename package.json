@@ -1,8 +1,8 @@
 {
   "name": "college-colors",
   "displayName": "College Colors",
-  "description": "VS Code themes in the colors of 51 well-known universities — Michigan, Ohio State, Alabama, Texas, Stanford, Duke, Berkeley, all eight Ivies and more. One dark and one light theme per school: the official palette drives the editor chrome, with a syntax scheme tuned for contrast against it.",
-  "version": "1.2.1",
+  "description": "VS Code themes in the colors of 53 well-known universities — Michigan, Ohio State, Alabama, Texas, Stanford, Duke, Berkeley, all eight Ivies and more. One dark and one light theme per school: the official palette drives the editor chrome, with a syntax scheme tuned for contrast against it.",
+  "version": "1.3.0",
   "publisher": "bjjeong",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -554,6 +554,26 @@
         "label": "College Colors: Arizona Wildcats Light",
         "uiTheme": "vs",
         "path": "./themes/arizona-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Bucknell Bison",
+        "uiTheme": "vs-dark",
+        "path": "./themes/bucknell-color-theme.json"
+      },
+      {
+        "label": "College Colors: Bucknell Bison Light",
+        "uiTheme": "vs",
+        "path": "./themes/bucknell-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Franklin & Marshall Diplomats",
+        "uiTheme": "vs-dark",
+        "path": "./themes/franklin-marshall-color-theme.json"
+      },
+      {
+        "label": "College Colors: Franklin & Marshall Diplomats Light",
+        "uiTheme": "vs",
+        "path": "./themes/franklin-marshall-light-color-theme.json"
       }
     ]
   }
