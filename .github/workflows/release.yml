@@ -6,6 +6,12 @@
 # with the exact packaged .vsix attached, so every published version is
 # tracked in the repo with the artifact that actually shipped.
 #
+# Every step is idempotent, so a partial failure (e.g. one registry down) can
+# be retried with the workflow_dispatch trigger: run it against main and it
+# republishes the release for main's package.json version, skipping whatever
+# already shipped. Manual runs require that version's tag to already exist and
+# point at main — dispatch can only retry a release, never create one.
+#
 # Required repo secret:
 #   VSCE_PAT    Azure DevOps PAT with Marketplace → Manage scope
 # Optional repo secret:
@@ -15,6 +21,7 @@ name: Release
 on:
   push:
     tags: ['v*']
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -29,13 +36,27 @@ jobs:
         with:
           node-version: 22
 
-      - name: Tag must match package.json version
+      - name: Resolve and verify release tag
         run: |
           PKG="v$(node -p "require('./package.json').version")"
-          if [ "$PKG" != "$GITHUB_REF_NAME" ]; then
-            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $PKG — bump the version in a PR first, then tag the merge commit."
-            exit 1
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            TAG="$GITHUB_REF_NAME"
+            if [ "$PKG" != "$TAG" ]; then
+              echo "::error::Tag $TAG does not match package.json version $PKG — bump the version in a PR first, then tag the merge commit."
+              exit 1
+            fi
+          else
+            TAG="$PKG"
+            if ! git fetch origin tag "$TAG" --no-tags 2>/dev/null; then
+              echo "::error::Tag $TAG does not exist — manual runs only retry an already-tagged release. Push the tag to cut a new one."
+              exit 1
+            fi
+            if [ "$(git rev-parse "$TAG^{commit}")" != "$(git rev-parse HEAD)" ]; then
+              echo "::error::Tag $TAG does not point at this commit — manual runs must target the ref that was tagged."
+              exit 1
+            fi
           fi
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
 
       - name: Build and validate all themes
         run: npm test
@@ -54,7 +75,14 @@ jobs:
             echo "::error::VSCE_PAT secret is not set — add an Azure DevOps PAT with Marketplace → Manage scope under Settings → Secrets and variables → Actions."
             exit 1
           fi
-          npx vsce publish --packagePath college-colors-*.vsix -p "$VSCE_PAT"
+          VERSION="$(node -p "require('./package.json').version")"
+          PUBLISHED="$(npx vsce show bjjeong.college-colors --json 2>/dev/null \
+            | node -p "JSON.parse(require('fs').readFileSync(0, 'utf8')).versions[0].version" 2>/dev/null || echo none)"
+          if [ "$PUBLISHED" = "$VERSION" ]; then
+            echo "Marketplace already has $VERSION — skipping (retry after a partial failure)."
+          else
+            npx vsce publish --packagePath college-colors-*.vsix -p "$VSCE_PAT"
+          fi
 
       - name: Publish to Open VSX
         env:
@@ -64,16 +92,18 @@ jobs:
             echo "::warning::OVSX_TOKEN secret is not set — skipping Open VSX (Cursor/VSCodium users). Create a token at open-vsx.org to enable."
             exit 0
           fi
+          npx ovsx create-namespace bjjeong -p "$OVSX_TOKEN" \
+            || echo "Namespace bjjeong already exists — continuing."
           npx ovsx publish college-colors-*.vsix -p "$OVSX_TOKEN"
 
       - name: Create GitHub Release with the shipped .vsix
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
-            gh release upload "$GITHUB_REF_NAME" college-colors-*.vsix --clobber
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" college-colors-*.vsix --clobber
           else
-            gh release create "$GITHUB_REF_NAME" college-colors-*.vsix \
-              --title "College Colors $GITHUB_REF_NAME" \
+            gh release create "$TAG" college-colors-*.vsix \
+              --title "College Colors $TAG" \
               --generate-notes
           fi
