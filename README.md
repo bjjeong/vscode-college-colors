@@ -45,7 +45,7 @@ Each link below is a preview render — dark first, light in parentheses.
 | [UCF Knights](images/previews/ucf.png) ([light](images/previews/ucf-light.png)) | [UCLA Bruins](images/previews/ucla.png) ([light](images/previews/ucla-light.png)) | [USC Trojans](images/previews/usc.png) ([light](images/previews/usc-light.png)) |
 | [Washington Huskies](images/previews/washington.png) ([light](images/previews/washington-light.png)) | [Wisconsin Badgers](images/previews/wisconsin.png) ([light](images/previews/wisconsin-light.png)) | [Yale Bulldogs](images/previews/yale.png) ([light](images/previews/yale-light.png)) |
 
-Don't see your school? [Open an issue](https://github.com/bjjeong/vscode-college-colors/issues) — adding one is a ten-line change.
+Don't see your school? [Request it](https://github.com/bjjeong/vscode-college-colors/issues/new?template=school-request.yml) — adding one is a ten-line change, and the request form asks for everything it needs.
 
 ## How the themes are built
 
