@@ -1,0 +1,48 @@
+# Gates every PR on the same invariants the generator promises:
+#   1. The committed themes/ and contributes.themes are exactly what
+#      palettes/schools.json generates — no hand-edited or stale themes.
+#   2. Every theme clears the validator: WCAG contrast floors, the ΔE
+#      perceptual-separation floor, chrome legibility, and the
+#      error-never-reads-as-keyword guarantee.
+#   3. The committed preview SVGs match the themes. PNGs are not compared —
+#      rsvg-convert output bytes vary across versions, so they are rendered
+#      locally (see README) and reviewed by eye.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-validate:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The build and validator are dependency-free Node scripts; nothing to install.
+      - name: Regenerate themes from palettes
+        run: npm run build
+
+      - name: Validate contrast and separation floors
+        run: npm run validate -- --verbose
+
+      - name: Committed themes must match the generator
+        run: |
+          if ! git diff --exit-code -- themes/ package.json; then
+            echo '::error::themes/ or contributes.themes is out of sync with palettes/schools.json — run `npm test` and commit the result.'
+            exit 1
+          fi
+
+      - name: Committed preview SVGs must match the themes
+        run: |
+          node scripts/preview.mjs
+          if ! git diff --exit-code -- 'images/previews/*.svg'; then
+            echo '::error::Preview SVGs are stale — run `node scripts/preview.mjs` and commit the result.'
+            exit 1
+          fi

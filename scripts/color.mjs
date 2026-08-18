@@ -95,14 +95,31 @@ export function contrastRatio(fg, bg) {
   return (hi + 0.05) / (lo + 0.05);
 }
 
-// Raise lightness (hue and chroma held) until the color clears `target` contrast
-// against `bg`. Used to keep every syntax token legible no matter how dark a
-// school's brand color is — Alabama crimson and Penn red both need this.
+// Move lightness (hue and chroma held) until the color clears `target` contrast
+// against `bg` — raising it on a dark background, lowering it on a light one.
+// Used to keep every syntax token legible no matter how dark or bright a
+// school's brand color is: Alabama crimson gets lifted for the dark themes,
+// Michigan maize gets sunk for the light ones.
 export function ensureContrast(hex, bg, target) {
   if (contrastRatio(hex, bg) >= target) return hex;
 
   const { L, C, h } = hexToOklch(hex);
   let best = hex;
+
+  if (relativeLuminance(bg) > 0.35) {
+    for (let step = L; step >= -0.0001; step -= 0.01) {
+      const candidate = oklchToHex({ L: step, C, h });
+      best = candidate;
+      if (contrastRatio(candidate, bg) >= target) return candidate;
+    }
+    // Fully desaturating is the last resort; an ink-dark token beats an illegible one.
+    for (let c = C; c >= 0; c -= 0.01) {
+      const candidate = oklchToHex({ L: 0.05, C: c, h });
+      if (contrastRatio(candidate, bg) >= target) return candidate;
+    }
+    return best;
+  }
+
   for (let step = L; step <= 1.0001; step += 0.01) {
     const candidate = oklchToHex({ L: step, C, h });
     best = candidate;

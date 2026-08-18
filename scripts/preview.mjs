@@ -223,10 +223,12 @@ const { schools } = JSON.parse(readFileSync(join(root, 'palettes/schools.json'),
 mkdirSync(join(root, 'images/previews'), { recursive: true });
 
 for (const school of schools) {
-  const theme = JSON.parse(
-    readFileSync(join(root, `themes/${school.slug}-color-theme.json`), 'utf8'),
-  );
-  writeFileSync(join(root, `images/previews/${school.slug}.svg`), render(theme));
+  for (const suffix of ['', '-light']) {
+    const theme = JSON.parse(
+      readFileSync(join(root, `themes/${school.slug}${suffix}-color-theme.json`), 'utf8'),
+    );
+    writeFileSync(join(root, `images/previews/${school.slug}${suffix}.svg`), render(theme));
+  }
 }
 
-console.log(`Rendered ${schools.length} previews to images/previews/.`);
+console.log(`Rendered ${schools.length * 2} previews to images/previews/.`);
