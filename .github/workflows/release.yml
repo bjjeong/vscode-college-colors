@@ -1,0 +1,79 @@
+# Publishes the extension when a version tag is pushed:
+#
+#   git tag v1.2.0 && git push origin v1.2.0
+#
+# Ships to the VS Code Marketplace and Open VSX, and creates a GitHub Release
+# with the exact packaged .vsix attached, so every published version is
+# tracked in the repo with the artifact that actually shipped.
+#
+# Required repo secret:
+#   VSCE_PAT    Azure DevOps PAT with Marketplace → Manage scope
+# Optional repo secret:
+#   OVSX_TOKEN  open-vsx.org token; the Open VSX step is skipped when absent
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # create the GitHub Release and upload the .vsix
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tag must match package.json version
+        run: |
+          PKG="v$(node -p "require('./package.json').version")"
+          if [ "$PKG" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match package.json version $PKG — bump the version in a PR first, then tag the merge commit."
+            exit 1
+          fi
+
+      - name: Build and validate all themes
+        run: npm test
+
+      - name: Install packaging tools
+        run: npm ci
+
+      - name: Package
+        run: npx vsce package
+
+      - name: Publish to VS Code Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: |
+          if [ -z "$VSCE_PAT" ]; then
+            echo "::error::VSCE_PAT secret is not set — add an Azure DevOps PAT with Marketplace → Manage scope under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          npx vsce publish --packagePath college-colors-*.vsix -p "$VSCE_PAT"
+
+      - name: Publish to Open VSX
+        env:
+          OVSX_TOKEN: ${{ secrets.OVSX_TOKEN }}
+        run: |
+          if [ -z "$OVSX_TOKEN" ]; then
+            echo "::warning::OVSX_TOKEN secret is not set — skipping Open VSX (Cursor/VSCodium users). Create a token at open-vsx.org to enable."
+            exit 0
+          fi
+          npx ovsx publish college-colors-*.vsix -p "$OVSX_TOKEN"
+
+      - name: Create GitHub Release with the shipped .vsix
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" college-colors-*.vsix --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" college-colors-*.vsix \
+              --title "College Colors $GITHUB_REF_NAME" \
+              --generate-notes
+          fi
