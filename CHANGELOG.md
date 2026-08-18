@@ -1,5 +1,20 @@
 # Change Log
 
+## [1.2.0]
+
+Added 22 schools — 51 schools, 102 themes total — chosen for athletic
+prominence, academic standing, and enrollment size:
+
+Arizona, Arizona State, Brown, California (Berkeley), Caltech, Chicago,
+Cornell, Dartmouth, Duke, Georgia Tech, Illinois, Johns Hopkins, Kansas,
+Kentucky, Miami, Minnesota, North Carolina, Princeton, Purdue, Stanford,
+UCF, Yale.
+
+With Yale, Princeton, Cornell, Brown, and Dartmouth joining Harvard, Penn,
+and Columbia, all eight Ivy League schools are now included. Every new
+school ships both a dark and a light variant and passes the same validation
+gate as the rest.
+
 ## [1.1.0]
 
 Added a light variant for every school — 29 new themes, 58 total, picked as

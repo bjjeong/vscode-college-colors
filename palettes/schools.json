@@ -206,6 +206,156 @@
       "dark": "#003865",
       "accent": "#B9D9EB",
       "source": "visualidentity.columbia.edu — Columbia Blue PMS 290; Athletic Dark Blue PMS 2955 C"
+    },
+    {
+      "slug": "stanford",
+      "label": "Stanford Cardinal",
+      "accent": "#8C1515",
+      "source": "identity.stanford.edu — Cardinal Red #8C1515 PMS 201"
+    },
+    {
+      "slug": "duke",
+      "label": "Duke Blue Devils",
+      "dark": "#012169",
+      "accent": "#00539B",
+      "source": "brand.duke.edu — Duke Navy Blue #012169 PMS 280, Duke Royal Blue #00539B"
+    },
+    {
+      "slug": "north-carolina",
+      "label": "North Carolina Tar Heels",
+      "dark": "#13294B",
+      "accent": "#4B9CD3",
+      "source": "identity.unc.edu — Navy #13294B, Carolina Blue #4B9CD3 PMS 542"
+    },
+    {
+      "slug": "kentucky",
+      "label": "Kentucky Wildcats",
+      "dark": "#0033A0",
+      "accent": "#3B73D8",
+      "source": "Kentucky Wildcat Blue #0033A0 PMS 286 (accent lightened for legibility)"
+    },
+    {
+      "slug": "kansas",
+      "label": "Kansas Jayhawks",
+      "dark": "#0051BA",
+      "accent": "#E8000D",
+      "source": "brand.ku.edu — KU Blue #0051BA PMS 293, Crimson #E8000D PMS 186"
+    },
+    {
+      "slug": "miami",
+      "label": "Miami Hurricanes",
+      "dark": "#005030",
+      "accent": "#F47321",
+      "source": "teamcolorcodes.com — Miami Green PMS 3435, Miami Orange PMS 158"
+    },
+    {
+      "slug": "berkeley",
+      "label": "California Golden Bears",
+      "dark": "#003262",
+      "accent": "#FDB515",
+      "source": "brand.berkeley.edu — Berkeley Blue #003262, California Gold #FDB515"
+    },
+    {
+      "slug": "yale",
+      "label": "Yale Bulldogs",
+      "dark": "#00356B",
+      "accent": "#3F7DC4",
+      "source": "yaleidentity.yale.edu — Yale Blue #00356B PMS 289 (accent lightened for legibility)"
+    },
+    {
+      "slug": "princeton",
+      "label": "Princeton Tigers",
+      "accent": "#E77500",
+      "secondary": "#000000",
+      "source": "communications.princeton.edu — Princeton Orange #E77500 PMS 158, Black"
+    },
+    {
+      "slug": "cornell",
+      "label": "Cornell Big Red",
+      "accent": "#B31B1B",
+      "source": "brand.cornell.edu — Carnelian #B31B1B"
+    },
+    {
+      "slug": "brown",
+      "label": "Brown Bears",
+      "dark": "#4E3629",
+      "accent": "#ED1C24",
+      "source": "brown.edu visual identity — Seal Brown #4E3629; digital palette Red #ED1C24 (the 2016 policy PDF cites Cardinal Red #990000 instead)"
+    },
+    {
+      "slug": "dartmouth",
+      "label": "Dartmouth Big Green",
+      "dark": "#00693E",
+      "accent": "#33A366",
+      "source": "Dartmouth Green #00693E PMS 349 (accent lightened for legibility)"
+    },
+    {
+      "slug": "caltech",
+      "label": "Caltech Beavers",
+      "accent": "#FF6C0C",
+      "source": "identity.caltech.edu — Caltech Orange #FF6C0C PMS 1585"
+    },
+    {
+      "slug": "uchicago",
+      "label": "Chicago Maroons",
+      "accent": "#800000",
+      "source": "uchicago.edu brand — Maroon #800000 PMS 202"
+    },
+    {
+      "slug": "johns-hopkins",
+      "label": "Johns Hopkins Blue Jays",
+      "dark": "#002D72",
+      "accent": "#68ACE5",
+      "source": "brand.jhu.edu — Heritage Blue #002D72 PMS 288, Spirit Blue #68ACE5 PMS 284"
+    },
+    {
+      "slug": "georgia-tech",
+      "label": "Georgia Tech Yellow Jackets",
+      "dark": "#003057",
+      "accent": "#B3A369",
+      "source": "brand.gatech.edu — Tech Navy #003057, Tech Gold #B3A369"
+    },
+    {
+      "slug": "arizona-state",
+      "label": "Arizona State Sun Devils",
+      "dark": "#8C1D40",
+      "accent": "#FFC627",
+      "source": "brandguide.asu.edu — ASU Maroon #8C1D40 PMS 208, ASU Gold #FFC627 PMS 123"
+    },
+    {
+      "slug": "ucf",
+      "label": "UCF Knights",
+      "dark": "#000000",
+      "accent": "#FFC904",
+      "source": "ucf.edu/brand — Black, Bright Gold #FFC904 PMS 7406"
+    },
+    {
+      "slug": "minnesota",
+      "label": "Minnesota Golden Gophers",
+      "dark": "#7A0019",
+      "accent": "#FFCC33",
+      "source": "university-relations.umn.edu — Maroon #7A0019 PMS 202, Gold #FFCC33 PMS 116"
+    },
+    {
+      "slug": "purdue",
+      "label": "Purdue Boilermakers",
+      "dark": "#000000",
+      "accent": "#CFB991",
+      "source": "marcom.purdue.edu — Black, Boilermaker Gold #CFB991"
+    },
+    {
+      "slug": "illinois",
+      "label": "Illinois Fighting Illini",
+      "dark": "#13294B",
+      "accent": "#FF5F05",
+      "source": "brand.illinois.edu — Illini Blue #13294B, Illini Orange #FF5F05"
+    },
+    {
+      "slug": "arizona",
+      "label": "Arizona Wildcats",
+      "dark": "#0C234B",
+      "accent": "#AB0520",
+      "source": "brand.arizona.edu — Arizona Blue #0C234B PMS 289, Arizona Red #AB0520 PMS 200"
     }
   ]
 }

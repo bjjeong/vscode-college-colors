@@ -1,8 +1,8 @@
 {
   "name": "college-colors",
   "displayName": "College Colors",
-  "description": "VS Code themes in the colors of 29 well-known universities — Michigan, Ohio State, Alabama, Texas, Notre Dame, LSU, Harvard, MIT, NYU and more. One dark and one light theme per school: the official palette drives the editor chrome, with a syntax scheme tuned for contrast against it.",
-  "version": "1.1.0",
+  "description": "VS Code themes in the colors of 51 well-known universities — Michigan, Ohio State, Alabama, Texas, Stanford, Duke, Berkeley, all eight Ivies and more. One dark and one light theme per school: the official palette drives the editor chrome, with a syntax scheme tuned for contrast against it.",
+  "version": "1.2.0",
   "publisher": "bjjeong",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -333,6 +333,226 @@
         "label": "College Colors: Columbia Lions Light",
         "uiTheme": "vs",
         "path": "./themes/columbia-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Stanford Cardinal",
+        "uiTheme": "vs-dark",
+        "path": "./themes/stanford-color-theme.json"
+      },
+      {
+        "label": "College Colors: Stanford Cardinal Light",
+        "uiTheme": "vs",
+        "path": "./themes/stanford-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Duke Blue Devils",
+        "uiTheme": "vs-dark",
+        "path": "./themes/duke-color-theme.json"
+      },
+      {
+        "label": "College Colors: Duke Blue Devils Light",
+        "uiTheme": "vs",
+        "path": "./themes/duke-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: North Carolina Tar Heels",
+        "uiTheme": "vs-dark",
+        "path": "./themes/north-carolina-color-theme.json"
+      },
+      {
+        "label": "College Colors: North Carolina Tar Heels Light",
+        "uiTheme": "vs",
+        "path": "./themes/north-carolina-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Kentucky Wildcats",
+        "uiTheme": "vs-dark",
+        "path": "./themes/kentucky-color-theme.json"
+      },
+      {
+        "label": "College Colors: Kentucky Wildcats Light",
+        "uiTheme": "vs",
+        "path": "./themes/kentucky-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Kansas Jayhawks",
+        "uiTheme": "vs-dark",
+        "path": "./themes/kansas-color-theme.json"
+      },
+      {
+        "label": "College Colors: Kansas Jayhawks Light",
+        "uiTheme": "vs",
+        "path": "./themes/kansas-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Miami Hurricanes",
+        "uiTheme": "vs-dark",
+        "path": "./themes/miami-color-theme.json"
+      },
+      {
+        "label": "College Colors: Miami Hurricanes Light",
+        "uiTheme": "vs",
+        "path": "./themes/miami-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: California Golden Bears",
+        "uiTheme": "vs-dark",
+        "path": "./themes/berkeley-color-theme.json"
+      },
+      {
+        "label": "College Colors: California Golden Bears Light",
+        "uiTheme": "vs",
+        "path": "./themes/berkeley-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Yale Bulldogs",
+        "uiTheme": "vs-dark",
+        "path": "./themes/yale-color-theme.json"
+      },
+      {
+        "label": "College Colors: Yale Bulldogs Light",
+        "uiTheme": "vs",
+        "path": "./themes/yale-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Princeton Tigers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/princeton-color-theme.json"
+      },
+      {
+        "label": "College Colors: Princeton Tigers Light",
+        "uiTheme": "vs",
+        "path": "./themes/princeton-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Cornell Big Red",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cornell-color-theme.json"
+      },
+      {
+        "label": "College Colors: Cornell Big Red Light",
+        "uiTheme": "vs",
+        "path": "./themes/cornell-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Brown Bears",
+        "uiTheme": "vs-dark",
+        "path": "./themes/brown-color-theme.json"
+      },
+      {
+        "label": "College Colors: Brown Bears Light",
+        "uiTheme": "vs",
+        "path": "./themes/brown-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Dartmouth Big Green",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dartmouth-color-theme.json"
+      },
+      {
+        "label": "College Colors: Dartmouth Big Green Light",
+        "uiTheme": "vs",
+        "path": "./themes/dartmouth-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Caltech Beavers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/caltech-color-theme.json"
+      },
+      {
+        "label": "College Colors: Caltech Beavers Light",
+        "uiTheme": "vs",
+        "path": "./themes/caltech-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Chicago Maroons",
+        "uiTheme": "vs-dark",
+        "path": "./themes/uchicago-color-theme.json"
+      },
+      {
+        "label": "College Colors: Chicago Maroons Light",
+        "uiTheme": "vs",
+        "path": "./themes/uchicago-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Johns Hopkins Blue Jays",
+        "uiTheme": "vs-dark",
+        "path": "./themes/johns-hopkins-color-theme.json"
+      },
+      {
+        "label": "College Colors: Johns Hopkins Blue Jays Light",
+        "uiTheme": "vs",
+        "path": "./themes/johns-hopkins-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Georgia Tech Yellow Jackets",
+        "uiTheme": "vs-dark",
+        "path": "./themes/georgia-tech-color-theme.json"
+      },
+      {
+        "label": "College Colors: Georgia Tech Yellow Jackets Light",
+        "uiTheme": "vs",
+        "path": "./themes/georgia-tech-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Arizona State Sun Devils",
+        "uiTheme": "vs-dark",
+        "path": "./themes/arizona-state-color-theme.json"
+      },
+      {
+        "label": "College Colors: Arizona State Sun Devils Light",
+        "uiTheme": "vs",
+        "path": "./themes/arizona-state-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: UCF Knights",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ucf-color-theme.json"
+      },
+      {
+        "label": "College Colors: UCF Knights Light",
+        "uiTheme": "vs",
+        "path": "./themes/ucf-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Minnesota Golden Gophers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/minnesota-color-theme.json"
+      },
+      {
+        "label": "College Colors: Minnesota Golden Gophers Light",
+        "uiTheme": "vs",
+        "path": "./themes/minnesota-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Purdue Boilermakers",
+        "uiTheme": "vs-dark",
+        "path": "./themes/purdue-color-theme.json"
+      },
+      {
+        "label": "College Colors: Purdue Boilermakers Light",
+        "uiTheme": "vs",
+        "path": "./themes/purdue-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Illinois Fighting Illini",
+        "uiTheme": "vs-dark",
+        "path": "./themes/illinois-color-theme.json"
+      },
+      {
+        "label": "College Colors: Illinois Fighting Illini Light",
+        "uiTheme": "vs",
+        "path": "./themes/illinois-light-color-theme.json"
+      },
+      {
+        "label": "College Colors: Arizona Wildcats",
+        "uiTheme": "vs-dark",
+        "path": "./themes/arizona-color-theme.json"
+      },
+      {
+        "label": "College Colors: Arizona Wildcats Light",
+        "uiTheme": "vs",
+        "path": "./themes/arizona-light-color-theme.json"
       }
     ]
   }
