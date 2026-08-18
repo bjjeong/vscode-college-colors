@@ -7,7 +7,7 @@
   <rect x="0" y="28" width="44" height="350" fill="#003865"/>
   <circle cx="22" cy="52" r="6" fill="#B9D9EB"/><circle cx="22" cy="82" r="6" fill="#7F9BBA"/><circle cx="22" cy="112" r="6" fill="#7F9BBA"/>
   <circle cx="31" cy="46" r="6" fill="#B9D9EB"/>
-  <text x="31" y="50" fill="#002342" font-size="9" text-anchor="middle">3</text>
+  <text x="31" y="50" fill="#003865" font-size="9" text-anchor="middle">3</text>
 
   <rect x="44" y="28" width="150" height="350" fill="#001F3C"/>
   <text x="56" y="48" fill="#B9D9EB" font-size="10" font-weight="bold">EXPLORER</text>

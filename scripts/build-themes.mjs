@@ -264,12 +264,16 @@ function buildTheme(school) {
   const accentOnActive = ensureContrast(accent, chrome.active, MIN_CONTRAST.ui);
   const accentOnSidebar = ensureContrast(accent, chrome.sidebarBg, MIN_CONTRAST.ui);
 
-  // Text sitting on top of the accent (buttons, badges) picks whichever of the
-  // chrome colour or white actually reads.
+  // Text sitting on top of the accent (buttons, badges). Prefer the school's
+  // actual brand colour — maize buttons should carry Michigan Blue, not a
+  // near-black approximation of it — and only fall back when it cannot carry
+  // body-text contrast against the accent.
   const onAccent =
-    contrastRatio(chrome.deep, accent) >= contrastRatio('#FFFFFF', accent)
-      ? chrome.deep
-      : '#FFFFFF';
+    contrastRatio(chrome.chromeBg, accent) >= MIN_CONTRAST.token
+      ? chrome.chromeBg
+      : contrastRatio(chrome.deep, accent) >= contrastRatio('#FFFFFF', accent)
+        ? chrome.deep
+        : '#FFFFFF';
 
   const accentOklch = hexToOklch(accent);
   const accentHover = oklchToHex({ ...accentOklch, L: accentOklch.L - 0.07 });
@@ -280,6 +284,37 @@ function buildTheme(school) {
   );
 
   const s = deriveSyntax(chrome, accent);
+
+  // ANSI colours must actually match their names. Reusing syntax roles here was
+  // wrong: `property` is a salmon at hue 38, so ansiYellow came out salmon and
+  // any program printing yellow looked orange. These are pinned to canonical
+  // hues and only tinted by the school's chroma, not its hue.
+  // Where a school's accent already sits in an ANSI hue family, let it take that
+  // slot: Michigan maize genuinely is the yellow, and a generated substitute
+  // would only look duller next to it.
+  const accentHueForAnsi = hexToOklch(accent).h;
+  const ansiAt = (h, L = 0.80) => {
+    if (hueDistance(accentHueForAnsi, h) <= 25) return accent;
+    return ensureContrast(oklchToHex({ L, C: 0.14, h }), chrome.sidebarBg, MIN_CONTRAST.token);
+  };
+  const ansi = {
+    'terminal.ansiBlack': chrome.deep,
+    'terminal.ansiRed': ansiAt(25),
+    'terminal.ansiGreen': ansiAt(145),
+    'terminal.ansiYellow': ansiAt(95),
+    'terminal.ansiBlue': ansiAt(250),
+    'terminal.ansiMagenta': ansiAt(330),
+    'terminal.ansiCyan': ansiAt(195),
+    'terminal.ansiWhite': chrome.sidebarFg,
+    'terminal.ansiBrightBlack': chrome.indentGuide,
+    'terminal.ansiBrightRed': ansiAt(25, 0.85),
+    'terminal.ansiBrightGreen': ansiAt(145, 0.88),
+    'terminal.ansiBrightYellow': ansiAt(95, 0.9),
+    'terminal.ansiBrightBlue': ansiAt(250, 0.83),
+    'terminal.ansiBrightMagenta': ansiAt(330, 0.85),
+    'terminal.ansiBrightCyan': ansiAt(195, 0.9),
+    'terminal.ansiBrightWhite': chrome.editorFg,
+  };
 
   return {
     name: school.label,
@@ -347,12 +382,7 @@ function buildTheme(school) {
 
       'terminal.background': chrome.sidebarBg,
       'terminal.foreground': chrome.sidebarFg,
-      'terminal.ansiYellow': s.property,
-      'terminal.ansiBlue': s.function,
-      'terminal.ansiGreen': s.string,
-      'terminal.ansiCyan': s.attribute,
-      'terminal.ansiMagenta': s.constant,
-      'terminal.ansiRed': s.invalid,
+      ...ansi,
 
       'input.background': chrome.widgetBg,
       'input.foreground': chrome.sidebarFg,
