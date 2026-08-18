@@ -2,7 +2,7 @@
   "name": "college-colors",
   "displayName": "College Colors",
   "description": "VS Code themes in the colors of 51 well-known universities — Michigan, Ohio State, Alabama, Texas, Stanford, Duke, Berkeley, all eight Ivies and more. One dark and one light theme per school: the official palette drives the editor chrome, with a syntax scheme tuned for contrast against it.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publisher": "bjjeong",
   "license": "MIT",
   "icon": "images/icon.png",

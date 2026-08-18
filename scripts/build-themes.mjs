@@ -560,7 +560,12 @@ function buildTheme(school, variant) {
       { scope: ['entity.name.tag'], settings: { foreground: s.function } },
       { scope: ['entity.other.attribute-name'], settings: { foreground: s.attribute } },
       { scope: ['variable', 'variable.parameter'], settings: { foreground: s.variable } },
-      { scope: ['variable.other.constant'], settings: { foreground: accent } },
+      // Const-declared variables — which is most variables in modern JS/TS,
+      // via the grammar's variable.other.constant and the semantic-token
+      // mapping for variable.readonly — take the constant family, not the
+      // accent, so `const` (keyword) and the name it declares never read as
+      // the same colour.
+      { scope: ['variable.other.constant'], settings: { foreground: s.constant } },
       { scope: ['punctuation', 'meta.brace'], settings: { foreground: s.punctuation } },
       {
         scope: ['support.type.property-name', 'meta.object-literal.key'],
